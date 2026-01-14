@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Estore:homepage</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+<script>
+
+function validate(){
+
+    let first_name=document.getElementById("first_name").value;
+    if(first_name=="")
+{
+    document.getElementById("first_name_error").innerText ="** please enter the first name **";
+    return false;
+}
+
+let last_name = document.getElementById("last_name").value;
+if(last_name=="")
+{
+    document.getElementById("last_name_error").innerText="** please enter the last name **";
+    return false;
+}
+
+let  email=document.getElementById("email").value;
+if(email=="")
+{
+    document.getElementById("email_error").innerText="** enter email";
+    return false;
+}
+
+let password=document.getElementById("password").value;
+if(password=="")
+{
+    document.getElementById("password_error").innerText="** please enter the password";
+    return false;
+}
+
+if(password.length<6)
+{
+    alert("must be of 6 length");
+
+}
+
+
+
+let terms = document.getElementsByName("term");
+let selectedValue = null;
+
+for (let i = 0; i < terms.length; i++) {
+    if (terms[i].checked) {
+        selectedValue = terms[i].value;
+        break;
+    }
+}
+
+if (selectedValue === null) {
+    document.getElementById("term_error").innerText = "**please select Yes or No";
+    return false;
+}
+
+if (selectedValue === "0") {
+    document.getElementById("term_error").innerText = "**Terms should be accepted to register";
+    return false;
+}
+
+
+return true;
+}
+
+</script>
+
+<style>
+    .validation_error
+    {
+        color :red;
+        font-size: 20px;
+        font-style: italic;
+    }
+</style>
+
+
+    </head>
+    <body>
+<div id="header">
+    <div id="logo">
+        <img src="images/image1.png" alt="elogo">
+    </div>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="product.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div id="login_reg_pannel">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div id="register_form">
+        <form action="register_process.php" method="post" onsubmit="return validate()">
+
+            <div>
+                <label>Firstname</label>
+                <input type="text" name="first_name" id="first_name"/>
+                <span class="validation_error" id="first_name_error"></span>
+            </div>
+
+              <div>
+                <label>Lastname</label>
+                <input type="text" name="last_name" id="last_name"/>
+                <span class="validation_error" id="last_name_error"></span>
+            </div>
+
+              <div>
+                <label>Email</label>
+                <input type="email" name="email" id="email"/>
+                <span class="validation_error" id="email_error"></span>
+            </div>
+
+              <div>
+                <label>Password</label>
+                <input type="password" name="password" id="password"/>
+                <span class="validation_error" id="password_error"></span>
+            </div>
+
+            <div>
+               <br> <p>Do you accept all the terms and conditions?</p>
+                <input type="radio" name="term" value="1"/><label>Yes</label>
+                <input type="radio" name="term" value="0"/><label>No</label>
+                <span class="validation_error" id="term_error"></span>
+
+            </div>
+
+            <div >
+                <input type="submit" value="Register Now" id="register_btn"/>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+
+    </body>
+</html>

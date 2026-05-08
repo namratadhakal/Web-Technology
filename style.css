@@ -1,0 +1,295 @@
+*
+{
+    
+    margin: 0px;
+    padding: 0px;    
+
+}
+body,html{
+    height:100%;
+
+}
+body{
+    background-color:rgb(119, 188, 119);
+    display: flex;
+    flex-direction: column;
+min-height: 100vh;
+}
+#header
+{
+    background-color:rgb(91, 141, 67);
+    height: 50px;
+width: 100%;
+position: fixed;
+top:0;
+
+}
+
+#logo,#navbar,#login_reg_pannel{
+    display:inline-block;
+}
+
+#logo,#navbar
+{
+ float:left;   
+}
+
+#logo img{
+    height:50px;
+    width:50px;
+}
+
+#login_reg_pannel{
+    float:right;
+    margin-top: 15px;
+}
+
+#navbar
+{
+    margin-top: 15px;
+    margin-left: 100px;
+}
+#navbar a,#login_reg_pannel a{
+    text-decoration: none;
+    color:white;
+    padding: 10px;
+}
+
+
+#navbar a:hover,#login_reg_pannel a:hover, .cart:hover
+{
+    background-color:rgb(66, 112, 66);
+    
+}
+
+h1{
+    text-align: center;
+    color:#2F5D50;
+    margin-top:  100px;
+    font-size:60px;
+    font-family:cursive;
+}
+
+h2{
+text-align: center;
+    color:#555555;
+    margin-top:  100px;
+    font-size:25px;
+    font-family:sans-serif;
+}
+
+
+/*for register part*/
+
+.container
+{
+    
+    height:500px;
+    width:100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+}
+
+#register_form
+{
+    border: 1px solid black;
+    padding:10px;
+    width:300px;
+    height: 250px;
+}
+
+#register_form label{
+    display:inline-block;
+    width:100px;
+    margin:4px;
+    
+}
+
+#register_btn
+{
+    padding:2px ;
+    cursor:pointer;
+    display:flex;
+    justify-self: center;
+    margin-top: 40px;
+    
+}
+#register_btn:hover
+{
+background-color: rgb(205, 190, 172);
+}
+
+
+/*for login page*/
+
+#login_form
+{
+    border: 1px black solid;
+    padding:5px;
+    width: 300px;
+
+}
+
+#login_form label
+{
+   display: inline-block;
+   width:100px;
+    margin:5px;
+}
+
+#login_btn
+{
+    padding: 5px;
+    display: flex;
+    justify-self: center;
+}
+#login_btn:hover{
+background-color: rgb(205, 190, 172);
+
+}
+
+/*for product page*/
+
+.product_container
+{
+    margin-top:auto;
+    height:auto;
+    width:100%;
+    border:1px solid black;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    
+    
+}
+
+.product{
+    height:350px;
+    width:200px;
+    background-color:rgb(212, 234, 215);
+    border-radius: 10px;
+    margin-left:10px ;
+    margin-top: 25px;
+    display:inline-block;
+    margin-bottom:5px;
+}
+
+.productImg
+{
+    height:200px;
+    width:180px;
+    margin:10px;
+
+}
+
+.add_to_cart
+{
+ background-color: white;
+ border-radius: 15px;
+ padding:10px;  
+ display: flex;
+ justify-self: center; 
+ margin-top: 10px;
+ 
+}
+
+.price{
+display: flex;
+justify-content: center;
+}
+
+.add_to_cart:hover
+{
+    background-color:rgb(198, 237, 194);
+}
+
+.product p{
+    margin-top: 3px;
+    text-align: center;
+}
+
+
+.cart{
+    width:35px;
+    display: inline-block;
+    margin-left: 400px;
+    margin-top:10px;
+    padding-left:5px;
+}
+
+#footer{
+    margin-top: auto;
+    background-color: rgb(91, 141, 67);
+    padding: 10px;
+    text-align: center;
+}
+    
+/* about us part */
+.about_container{
+
+    width: 70%;
+    margin: 70px auto;
+    text-align: center;
+    background-color: #c5eec9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+.about_container h1{
+    margin-bottom: 10px;
+    color: #2e7d32;
+}
+
+.about_container h2{
+    margin-top: 25px;
+    color: #388e3c;
+}
+
+.about_container p{
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.about_container ul{
+    list-style-position: inside;
+    padding: 0;
+}
+
+.about_container li{
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+/* contact page */
+.contact_container{
+    margin:100px auto;
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #c5eec9;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+.contact_container h1{
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.contact_container p{
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.contact_info{
+    margin-top: 25px;
+}
